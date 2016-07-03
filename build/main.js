@@ -25,6 +25,8 @@ var main = {
     var backgroundWindow = new BrowserWindow();
     if (!debug) {
       backgroundWindow.hide();
+    } else {
+      backgroundWindow.webContents.openDevTools();
     }
     backgroundWindow.loadURL(url);
 
